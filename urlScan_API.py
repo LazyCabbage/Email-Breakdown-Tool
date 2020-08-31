@@ -40,7 +40,7 @@ def scan_link(link_to_check: str, API_KEY: str = '2c036869-fcd7-41e3-848e-d41eda
     time.sleep(SECONDS_TO_GENERATE_A_RESULT)
 
     # now go get the result from the URL provided.
-
+    result = requests.get(result_URL)
 
     # again, check to see if we got an error first
     if result.status_code >= 400:
